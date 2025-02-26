@@ -1,0 +1,12 @@
+Programming Language used: Python
+SQLite was used to host the database, as it is lightweight and easy to setup, suitable for the need of this exercise as not a lot of data is involved.
+Flask was used to setup the API, again due to its simplicity and hence usability.
+The requests library was used to make API calls to Meteomatics and fetch the required data, while the sqlite3 library was used to store and interact with the database.
+The API call results were in json format, so that they could easily be processed into the suitable format and schema of the database.
+
+Technical Challenges:
+The API call method needed careful consideration in order to retrieve the correct data. The exercise asked to collect data for 3 locations, whereas from Meteomatics documentation, it was not clear how to get the data or coordinates for specific locations. Therefore, a dictionary was manually created storing the coordinates of 3 cities, namely Nicosia, Athens and Rome. These coordinates were used in the API calls. Moreover, one of the requirements was:
+"List the average the_temp of the last 3 forecasts for each location for every day"
+This suggests that for each day, an average of the temperature metric needs to be returned. This requires the collection of multiple measurements for the temperature metric, for each day. Therefore, the API calls were formed so that the hourly forecasts were collected, for each location, for the next 7 days from the current date. It was also unclear from the exercise, what is meant by "last 3 forecasts" for specific days. The data was collected once and is being updated every time the "get_data.py" script is executed. So it could be the case that the database should also be updated as long as the application is running, to get new forecasts, which was not implemented. The daily forecasts returned by the database list the maximum and minimum values for each day, for each metric. The top n locations based on each metric is subjective so as to if a higher or lower metric is considered better (higher average was used).
+
+Deployment on the Cloud was not implemented due to time restrictions and inexperience in such platforms (e.g. GCP, AWS).
