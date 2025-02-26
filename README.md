@@ -1,8 +1,4 @@
-# Automatic Knowledge Graph Generation
-
-This project includes several Python scripts that depend on functions organized into separate directories. To ensure that the scripts can locate and import functions from these directories, you need to set the `PYTHONPATH` environment variable.
-
-This `README.md` will guide you through the steps to set the `PYTHONPATH` on your system to point to the project root directory.
+# Weather Forecasting Exercise
 
 ---
 
