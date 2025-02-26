@@ -4,11 +4,7 @@
 
 ## Table of Contents
 1. [Project Structure](#project-structure)
-2. [Setting Up the PYTHONPATH](#setting-up-the-pythonpath)
-    - [Windows](#windows)
-    - [Linux / macOS](#linux--macos)
-3. [How to Run the Scripts](#how-to-run-the-scripts)
-4. [Configuration](#configuration)
+2. [How to Run the Scripts](#how-to-run-the-scripts)
 
 ---
 
